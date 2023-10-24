@@ -1,6 +1,14 @@
 # Api for LLM Flask
 
-Run the cloud-init script
+Run the cloud-init script and reboot the server.
+
+To check the cloud-init logs:
+
+`sudo cat /var/log/cloud-init-output.log`
+
+`sudo cat /var/log/cloud-init.log`
+
+## Setup
 
 `git clone https://github.com/don-dp/apiforllm-functions.git`
 
@@ -10,23 +18,9 @@ Run the cloud-init script
 
 `cd ../`
 
-`ssh-keygen`
-
-`cat ~/.ssh/id_rsa.pub`
-
-Copy the public key and create a deploy key.
-
-`git clone git@github.com:don-dp/apiforllmflask.git`
+`git clone https://github.com/don-dp/apiforllmflask.git`
 
 `cd apiforllmflask/`
-
-Use the below for testing:
-
-`sudo ufw allow 80`
-
-`sudo ufw allow 443`
-
-For production:
 
 `sudo ufw allow from [your-ip-address] to any port 80`
 
